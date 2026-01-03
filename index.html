@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neerraj Singh Amarnath | Embedded Systems Engineer</title>
+    <meta name="description" content="ECE Student | Embedded Systems Engineer | Low-Level Programming Specialist">
+    <!-- Tailwind CSS with Custom Theme -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              'terminal': '#0a0e17',
+              'code': '#1e293b',
+              'accent': '#10b981',
+              'accent-dark': '#059669',
+              'syntax': '#7dd3fc',
+              'comment': '#6b7280',
+              'string': '#f472b6',
+              'number': '#f59e0b',
+              'keyword': '#818cf8',
+            },
+            fontFamily: {
+              'mono': ['Fira Code', 'monospace'],
+              'sans': ['Inter', 'sans-serif'],
+            },
+          }
+        }
+      }
+    </script>
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-terminal text-gray-300 font-sans">
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-code/90 backdrop-blur-sm shadow-lg z-50 border-b border-accent/20">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <a href="#home" class="text-xl font-bold text-accent font-mono">Neerraj Singh Amarnath  <span class="text-syntax">()</span></a>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#about" class="hover:text-accent transition font-mono text-sm">About</a>
+                    <a href="#projects" class="hover:text-accent transition font-mono text-sm">Projects</a>
+                    <a href="#contact" class="hover:text-accent transition font-mono text-sm">Contact</a>
+                </div>
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-button" class="text-gray-300">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-code/95 backdrop-blur-sm pb-4 px-4 border-t border-accent/20">
+            <a href="#about" class="block py-3 px-2 hover:text-accent font-mono text-sm border-l-2 border-accent">// About</a>
+            <a href="#projects" class="block py-3 px-2 hover:text-accent font-mono text-sm border-l-2 border-accent">// Projects</a>
+            <a href="#contact" class="block py-3 px-2 hover:text-accent font-mono text-sm border-l-2 border-accent">// Contact</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen flex items-center pt-16">
+        <div class="max-w-6xl mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6 font-mono">$ <span class="text-accent">whoami</span></h1>
+            <h2 class="text-2xl md:text-3xl text-syntax mb-8 font-mono">// Embedded Systems Engineer</h2>
+            <div class="max-w-2xl mx-auto mb-8 p-6 bg-code/50 rounded-lg border border-accent/20 font-mono text-sm">
+                <p class="text-comment mb-2">/*</p>
+                <p class="mb-2">I work at the intersection of hardware and software,</p>
+                <p class="mb-2">crafting efficient, low-level solutions that power the devices</p>
+                <p>we interact with every day.</p>
+                <p class="text-comment mt-2">*/</p>
+            </div>
+            <div class="space-x-4">
+                <a href="#projects" class="bg-accent text-terminal px-6 py-3 rounded font-mono text-sm hover:bg-accent-dark transition inline-flex items-center">
+                    <i class="fas fa-code-branch mr-2"></i> view_projects()
+                </a>
+                <a href="#contact" class="border border-accent text-accent px-6 py-3 rounded font-mono text-sm hover:bg-accent/10 transition inline-flex items-center">
+                    <i class="fas fa-terminal mr-2"></i> contact_me()
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-code/30">
+        <div class="max-w-6xl mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 font-mono">// about_me()</h2>
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/3 mb-8 md:mb-0 md:pr-8">
+                    <div class="bg-code/50 rounded-lg p-1 border border-accent/20">
+                        <div class="bg-terminal rounded p-4 font-mono text-sm h-64 overflow-y-auto">
+                            <p class="text-comment">/*</p>
+                            <p class="text-comment"> * Embedded Systems Engineer</p>
+                            <p class="text-comment"> * Low-Level Programming Specialist</p>
+                            <p class="text-comment"> * Hardware Enthusiast</p>
+                            <p class="text-comment"> */</p>
+                            <p class="mt-4"><span class="text-keyword">const</span> <span class="text-accent">aboutMe</span> = {</p>
+                            <p class="ml-4"><span class="text-keyword">name</span>: <span class="text-string">'Neerraj Singh Amarnath'</span>,</p>
+                            <p class="ml-4"><span class="text-keyword">title</span>: <span class="text-string">'Embedded Systems Engineer'</span>,</p>
+                            <p class="ml-4"><span class="text-keyword">education</span>: <span class="text-string">'BSECE UT Austin'</span>,</p>
+                            <p class="ml-4"><span class="text-keyword">location</span>: <span class="text-string">'University of Texas at Austin'</span>,</p>
+                            <p class="ml-4"><span class="text-keyword">interests</span>: [</p>
+                            <p class="ml-8 text-comment">// Click to expand</p>
+                            <p class="ml-4">]</p>
+                            <p>};</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="md:w-2/3">
+                    <h3 class="text-2xl font-semibold mb-4 font-mono text-accent">#define WHO_AM_I</h3>
+                    <div class="bg-code/50 p-6 rounded-lg border border-accent/20 mb-6">
+                        <p class="mb-4">
+                            I'm an Electrical and Computer Engineering student with a deep passion for embedded systems, 
+                            low-level programming, and hardware-software co-design. My work focuses on creating efficient, 
+                            reliable systems that operate close to the metal.
+                        </p>
+                        <p class="mb-4">
+                            I thrive in environments where I can optimize code for performance and memory usage, 
+                            work with microcontrollers, and develop firmware that brings hardware to life.
+                        </p>
+                        <p>
+                            When I'm not debugging hardware or writing C, you can find me contributing to open-source 
+                            projects, exploring new architectures, or diving into reverse engineering challenges.
+                        </p>
+                    </div>
+                    
+                    <h4 class="font-mono text-accent mb-3">$ skills</h4>
+                    <div class="grid grid-cols-2 md:grid-cols-3 gap-3 mb-6">
+                        <div class="bg-code/50 p-3 rounded border border-accent/20">
+                            <div class="flex items-center">
+                                <i class="fas fa-microchip text-accent mr-2"></i>
+                                <span class="font-mono text-sm">Embedded C/C++</span>
+                            </div>
+                        </div>
+                        <div class="bg-code/50 p-3 rounded border border-accent/20">
+                            <div class="flex items-center">
+                                <i class="fas fa-bolt text-accent mr-2"></i>
+                                <span class="font-mono text-sm">RTOS</span>
+                            </div>
+                        </div>
+                        <div class="bg-code/50 p-3 rounded border border-accent/20">
+                            <div class="flex items-center">
+                                <i class="fas fa-microscope text-accent mr-2"></i>
+                                <span class="font-mono text-sm">Assembly</span>
+                            </div>
+                        </div>
+                        <div class="bg-code/50 p-3 rounded border border-accent/20">
+                            <div class="flex items-center">
+                                <i class="fas fa-robot text-accent mr-2"></i>
+                                <span class="font-mono text-sm">Robotics</span>
+                            </div>
+                        </div>
+                        <div class="bg-code/50 p-3 rounded border border-accent/20">
+                            <div class="flex items-center">
+                                <i class="fas fa-satellite-dish text-accent mr-2"></i>
+                                <span class="font-mono text-sm">IoT</span>
+                            </div>
+                        </div>
+                        <div class="bg-code/50 p-3 rounded border border-accent/20">
+                            <div class="flex items-center">
+                                <i class="fas fa-bug text-accent mr-2"></i>
+                                <span class="font-mono text-sm">Debugging</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <a href="#" class="inline-flex items-center text-accent hover:text-accent-dark font-mono text-sm border border-accent/30 hover:border-accent/50 px-4 py-2 rounded transition">
+                        <i class="fas fa-file-download mr-2"></i> download_resume()
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 bg-terminal">
+        <div class="max-w-6xl mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-4 font-mono">// projects()</h2>
+            <p class="text-center text-gray-400 mb-12 max-w-2xl mx-auto font-mono">
+                A collection of my embedded systems and low-level programming projects.
+            </p>
+            
+            <!-- Project Categories -->
+            <div class="flex justify-center mb-12">
+                <div class="inline-flex rounded-md overflow-hidden border border-accent/20" role="group">
+                    <button type="button" class="px-4 py-2 text-sm font-mono bg-code/50 text-accent border-r border-accent/20 hover:bg-accent/10 transition" data-category="all">
+                        $ all
+                    </button>
+                    <button type="button" class="px-4 py-2 text-sm font-mono bg-code/50 text-gray-400 border-r border-accent/20 hover:bg-accent/10 hover:text-accent transition" data-category="software">
+                        $ software
+                    </button>
+                    <button type="button" class="px-4 py-2 text-sm font-mono bg-code/50 text-gray-400 hover:bg-accent/10 hover:text-accent transition" data-category="hardware">
+                        $ hardware
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Projects Grid -->
+            <div id="projects-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Projects will be dynamically loaded here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-code/30">
+        <div class="max-w-4xl mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 font-mono">// contact_me()</h2>
+            <div class="bg-code/50 rounded-xl border border-accent/20 p-8 backdrop-blur-sm">
+                <p class="text-center text-gray-300 mb-8 font-mono">
+                    /* Looking for collaboration or have questions? */
+                </p>
+                <p class="text-center text-gray-400 text-sm mb-8">
+                    I'm currently available for embedded systems and low-level programming opportunities.
+                </p>
+                <form id="contact-form" class="space-y-6">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label for="name" class="block text-sm font-mono text-gray-400 mb-1">> name</label>
+                            <input type="text" id="name" name="name" required 
+                                   class="w-full px-4 py-3 bg-code/80 border border-accent/20 text-gray-200 rounded font-mono text-sm focus:ring-2 focus:ring-accent/50 focus:border-accent/50 focus:outline-none transition">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-sm font-mono text-gray-400 mb-1">> email</label>
+                            <input type="email" id="email" name="email" required 
+                                   class="w-full px-4 py-3 bg-code/80 border border-accent/20 text-gray-200 rounded font-mono text-sm focus:ring-2 focus:ring-accent/50 focus:border-accent/50 focus:outline-none transition">
+                        </div>
+                    </div>
+                    <div>
+                        <label for="subject" class="block text-sm font-mono text-gray-400 mb-1">> subject</label>
+                        <input type="text" id="subject" name="subject" required 
+                               class="w-full px-4 py-3 bg-code/80 border border-accent/20 text-gray-200 rounded font-mono text-sm focus:ring-2 focus:ring-accent/50 focus:border-accent/50 focus:outline-none transition">
+                    </div>
+                    <div>
+                        <label for="message" class="block text-sm font-mono text-gray-400 mb-1">> message</label>
+                        <textarea id="message" name="message" rows="5" required 
+                                 class="w-full px-4 py-3 bg-code/80 border border-accent/20 text-gray-200 rounded font-mono text-sm focus:ring-2 focus:ring-accent/50 focus:border-accent/50 focus:outline-none transition"></textarea>
+                    </div>
+                    <div class="text-center">
+                        <button type="submit" class="bg-accent text-terminal px-8 py-3 rounded font-mono hover:bg-accent-dark transition inline-flex items-center">
+                            <i class="fas fa-paper-plane mr-2"></i> send_message()
+                        </button>
+                    </div>
+                </form>
+                <div class="mt-12 pt-8 border-t border-accent/20">
+                    <p class="text-center text-gray-400 text-sm mb-6 font-mono">// Connect with me</p>
+                    <div class="flex justify-center space-x-6">
+                        <a href="#" class="text-gray-400 hover:text-accent transition" title="GitHub">
+                            <i class="fab fa-github text-2xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-accent transition" title="LinkedIn">
+                            <i class="fab fa-linkedin-in text-2xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-accent transition" title="Twitter">
+                            <i class="fab fa-twitter text-2xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-accent transition" title="Email">
+                            <i class="fas fa-envelope text-2xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-accent transition" title="GitLab">
+                            <i class="fab fa-gitlab text-2xl"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-code/80 text-gray-400 py-6 border-t border-accent/20">
+        <div class="max-w-6xl mx-auto px-4 text-center">
+            <div class="mb-2">
+                <span class="font-mono text-sm">$ <span class="text-accent">echo</span> <span class="text-string">"© <span id='current-year'></span> Your Name. All rights reserved."</span></span>
+            </div>
+            <p class="text-xs font-mono">/* Built with <i class="fas fa-heart text-red-400 mx-1"></i> using VSCode */</p>
+        </div>
+    </footer>
+
+    <!-- Back to top button -->
+    <button id="back-to-top" class="fixed bottom-8 right-8 bg-indigo-600 text-white p-3 rounded-full shadow-lg opacity-0 invisible transition-all duration-300 hover:bg-indigo-700">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- JavaScript -->
+    <script src="projects.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
