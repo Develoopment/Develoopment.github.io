@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Personal Portfolio Website
 
 A minimalistic, responsive, and modern portfolio website for showcasing your projects and skills as an ECE student and developer.
@@ -100,3 +101,7 @@ This project is open source and available under the [MIT License](LICENSE).
 ---
 
 Feel free to customize this portfolio to match your personal style and needs. Happy coding! 🚀
+=======
+# Develoopment.github.io
+This is my up to date portfolio website. I will update as I complete milestones in my engineering journey.
+>>>>>>> origin/main
