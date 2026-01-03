@@ -190,24 +190,139 @@
                 A collection of my embedded systems and low-level programming projects.
             </p>
             
-            <!-- Project Categories -->
-            <div class="flex justify-center mb-12">
-                <div class="inline-flex rounded-md overflow-hidden border border-accent/20" role="group">
-                    <button type="button" class="px-4 py-2 text-sm font-mono bg-code/50 text-accent border-r border-accent/20 hover:bg-accent/10 transition" data-category="all">
-                        $ all
-                    </button>
-                    <button type="button" class="px-4 py-2 text-sm font-mono bg-code/50 text-gray-400 border-r border-accent/20 hover:bg-accent/10 hover:text-accent transition" data-category="software">
-                        $ software
-                    </button>
-                    <button type="button" class="px-4 py-2 text-sm font-mono bg-code/50 text-gray-400 hover:bg-accent/10 hover:text-accent transition" data-category="hardware">
-                        $ hardware
-                    </button>
-                </div>
-            </div>
-            
             <!-- Projects Grid -->
-            <div id="projects-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Projects will be dynamically loaded here -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project 1 -->
+                <div class="project-card bg-code/50 rounded-xl overflow-hidden border border-accent/20 transform transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://via.placeholder.com/600x400/1e293b/10b981?text=RTOS+ARM" alt="RTOS for ARM Cortex-M" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 text-accent">RTOS for ARM Cortex-M</h3>
+                        <p class="text-gray-300 mb-4 text-sm">A lightweight Real-Time Operating System developed from scratch for ARM Cortex-M microcontrollers.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="inline-block bg-indigo-100 text-indigo-800 text-xs px-2 py-1 rounded-full">embedded</span>
+                            <span class="inline-block bg-indigo-100 text-indigo-800 text-xs px-2 py-1 rounded-full">c</span>
+                            <span class="inline-block bg-indigo-100 text-indigo-800 text-xs px-2 py-1 rounded-full">arm</span>
+                        </div>
+                        <div class="flex space-x-3">
+                            <a href="#" class="text-sm text-accent hover:underline inline-flex items-center">
+                                <i class="fab fa-github mr-1"></i> Code
+                            </a>
+                            <a href="#" class="text-sm text-accent hover:underline inline-flex items-center">
+                                <i class="fas fa-external-link-alt mr-1"></i> Live Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card bg-code/50 rounded-xl overflow-hidden border border-accent/20 transform transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://via.placeholder.com/600x400/1e293b/7dd3fc?text=Bootloader" alt="Custom Bootloader" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 text-accent">Custom Bootloader</h3>
+                        <p class="text-gray-300 mb-4 text-sm">A custom bootloader for STM32 microcontrollers with USB DFU support and secure firmware updates.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="inline-block bg-indigo-100 text-indigo-800 text-xs px-2 py-1 rounded-full">embedded</span>
+                            <span class="inline-block bg-indigo-100 text-indigo-800 text-xs px-2 py-1 rounded-full">stm32</span>
+                            <span class="inline-block bg-indigo-100 text-indigo-800 text-xs px-2 py-1 rounded-full">usb</span>
+                        </div>
+                        <div class="flex space-x-3">
+                            <a href="#" class="text-sm text-accent hover:underline inline-flex items-center">
+                                <i class="fab fa-github mr-1"></i> Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="project-card bg-code/50 rounded-xl overflow-hidden border border-accent/20 transform transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://via.placeholder.com/600x400/1e293b/f59e0b?text=CAN+Analyzer" alt="CAN Bus Analyzer" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 text-accent">CAN Bus Analyzer</h3>
+                        <p class="text-gray-300 mb-4 text-sm">A hardware tool for analyzing and debugging CAN bus networks with real-time message filtering.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="inline-block bg-indigo-100 text-indigo-800 text-xs px-2 py-1 rounded-full">embedded</span>
+                            <span class="inline-block bg-indigo-100 text-indigo-800 text-xs px-2 py-1 rounded-full">can</span>
+                            <span class="inline-block bg-indigo-100 text-indigo-800 text-xs px-2 py-1 rounded-full">c++</span>
+                        </div>
+                        <div class="flex space-x-3">
+                            <a href="#" class="text-sm text-accent hover:underline inline-flex items-center">
+                                <i class="fab fa-github mr-1"></i> Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="project-card bg-code/50 rounded-xl overflow-hidden border border-accent/20 transform transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://via.placeholder.com/600x400/1e293b/f472b6?text=Assembly+Game" alt="x86 Assembly Game" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 text-accent">x86 Assembly Game</h3>
+                        <p class="text-gray-300 mb-4 text-sm">A simple game written entirely in x86 Assembly language with custom graphics rendering.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="inline-block bg-indigo-100 text-indigo-800 text-xs px-2 py-1 rounded-full">assembly</span>
+                            <span class="inline-block bg-indigo-100 text-indigo-800 text-xs px-2 py-1 rounded-full">x86</span>
+                            <span class="inline-block bg-indigo-100 text-indigo-800 text-xs px-2 py-1 rounded-full">low-level</span>
+                        </div>
+                        <div class="flex space-x-3">
+                            <a href="#" class="text-sm text-accent hover:underline inline-flex items-center">
+                                <i class="fab fa-github mr-1"></i> Code
+                            </a>
+                            <a href="#" class="text-sm text-accent hover:underline inline-flex items-center">
+                                <i class="fas fa-external-link-alt mr-1"></i> Play
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 5 -->
+                <div class="project-card bg-code/50 rounded-xl overflow-hidden border border-accent/20 transform transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://via.placeholder.com/600x400/1e293b/818cf8?text=Linux+Driver" alt="Embedded Linux Driver" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 text-accent">Embedded Linux Driver</h3>
+                        <p class="text-gray-300 mb-4 text-sm">A custom Linux kernel module for interfacing with custom hardware and memory-mapped I/O.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="inline-block bg-indigo-100 text-indigo-800 text-xs px-2 py-1 rounded-full">linux</span>
+                            <span class="inline-block bg-indigo-100 text-indigo-800 text-xs px-2 py-1 rounded-full">kernel</span>
+                            <span class="inline-block bg-indigo-100 text-indigo-800 text-xs px-2 py-1 rounded-full">driver</span>
+                        </div>
+                        <div class="flex space-x-3">
+                            <a href="#" class="text-sm text-accent hover:underline inline-flex items-center">
+                                <i class="fab fa-github mr-1"></i> Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 6 -->
+                <div class="project-card bg-code/50 rounded-xl overflow-hidden border border-accent/20 transform transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://via.placeholder.com/600x400/1e293b/ec4899?text=FPGA+DSP" alt="FPGA-Based Signal Processor" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 text-accent">FPGA Signal Processor</h3>
+                        <p class="text-gray-300 mb-4 text-sm">A real-time digital signal processing system implemented on an FPGA with custom VHDL modules.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="inline-block bg-indigo-100 text-indigo-800 text-xs px-2 py-1 rounded-full">fpga</span>
+                            <span class="inline-block bg-indigo-100 text-indigo-800 text-xs px-2 py-1 rounded-full">vhdl</span>
+                            <span class="inline-block bg-indigo-100 text-indigo-800 text-xs px-2 py-1 rounded-full">dsp</span>
+                        </div>
+                        <div class="flex space-x-3">
+                            <a href="#" class="text-sm text-accent hover:underline inline-flex items-center">
+                                <i class="fab fa-github mr-1"></i> Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -280,9 +395,8 @@
     <footer class="bg-code/80 text-gray-400 py-6 border-t border-accent/20">
         <div class="max-w-6xl mx-auto px-4 text-center">
             <div class="mb-2">
-                <span class="font-mono text-sm">$ <span class="text-accent">echo</span> <span class="text-string">"© <span id='current-year'></span> Your Name. All rights reserved."</span></span>
+                <span class="font-mono text-sm">$ <span class="text-accent">echo</span> <span class="text-string">"© <span id='current-year'></span> Neerraj Singh Amarnath. All rights reserved."</span></span>
             </div>
-            <p class="text-xs font-mono">/* Built with <i class="fas fa-heart text-red-400 mx-1"></i> using VSCode */</p>
         </div>
     </footer>
 
@@ -291,8 +405,74 @@
         <i class="fas fa-arrow-up"></i>
     </button>
 
-    <!-- JavaScript -->
-    <script src="projects.js"></script>
-    <script src="main.js"></script>
+    <!-- Simple JavaScript for current year and mobile menu -->
+    <script>
+        // Set current year in footer
+        document.addEventListener('DOMContentLoaded', function() {
+            // Update year
+            const yearElement = document.getElementById('current-year');
+            if (yearElement) {
+                yearElement.textContent = new Date().getFullYear();
+            }
+            
+            // Mobile menu toggle
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            
+            if (mobileMenuButton && mobileMenu) {
+                mobileMenuButton.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('hidden');
+                    document.body.style.overflow = mobileMenu.classList.contains('hidden') ? '' : 'hidden';
+                });
+                
+                // Close menu when clicking on a link
+                document.querySelectorAll('#mobile-menu a').forEach(link => {
+                    link.addEventListener('click', () => {
+                        mobileMenu.classList.add('hidden');
+                        document.body.style.overflow = '';
+                    });
+                });
+            }
+            
+            // Smooth scrolling for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#' || targetId.startsWith('#')) {
+                        e.preventDefault();
+                        const targetElement = document.querySelector(targetId);
+                        if (targetElement) {
+                            window.scrollTo({
+                                top: targetElement.offsetTop - 80,
+                                behavior: 'smooth'
+                            });
+                        }
+                    }
+                });
+            });
+            
+            // Back to top button
+            const backToTopButton = document.getElementById('back-to-top');
+            if (backToTopButton) {
+                window.addEventListener('scroll', () => {
+                    if (window.pageYOffset > 300) {
+                        backToTopButton.classList.remove('opacity-0', 'invisible');
+                        backToTopButton.classList.add('opacity-100', 'visible');
+                    } else {
+                        backToTopButton.classList.remove('opacity-100', 'visible');
+                        backToTopButton.classList.add('opacity-0', 'invisible');
+                    }
+                });
+                
+                backToTopButton.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    window.scrollTo({
+                        top: 0,
+                        behavior: 'smooth'
+                    });
+                });
+            }
+        });
+    </script>
 </body>
 </html>
