@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RTOS for ARM Cortex-M | Neerraj Singh Amarnath</title>
+    <!-- Tailwind CSS with Custom Theme -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              'terminal': '#0a0e17',
+              'code': '#1e293b',
+              'accent': '#10b981',
+              'accent-dark': '#059669',
+              'syntax': '#7dd3fc',
+              'comment': '#6b7280',
+              'string': '#f472b6',
+              'number': '#f59e0b',
+              'keyword': '#818cf8',
+            },
+            fontFamily: {
+              'mono': ['Fira Code', 'monospace'],
+              'sans': ['Inter', 'sans-serif'],
+            },
+          }
+        }
+      }
+    </script>
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+        /* Code block styling */
+        pre {
+            background-color: #1e293b !important;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            overflow-x: auto;
+        }
+        code {
+            font-family: 'Fira Code', monospace;
+        }
+    </style>
+</head>
+<body class="bg-terminal text-gray-300 font-sans">
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-code/90 backdrop-blur-sm shadow-lg z-50 border-b border-accent/20">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <a href="index.html" class="text-xl font-bold text-accent font-mono">Neerraj Singh Amarnath  <span class="text-syntax">()</span></a>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html#about" class="hover:text-accent transition font-mono text-sm">About</a>
+                    <a href="index.html#projects" class="hover:text-accent transition font-mono text-sm">Projects</a>
+                    <a href="index.html#contact" class="hover:text-accent transition font-mono text-sm">Contact</a>
+                </div>
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-button" class="text-gray-300">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+            <!-- Mobile menu -->
+            <div id="mobile-menu" class="hidden md:hidden bg-code/95 backdrop-blur-sm pb-4 px-4 border-t border-accent/20">
+                <a href="index.html#about" class="block py-3 px-2 hover:text-accent font-mono text-sm border-l-2 border-accent">// About</a>
+                <a href="index.html#projects" class="block py-3 px-2 hover:text-accent font-mono text-sm border-l-2 border-accent">// Projects</a>
+                <a href="index.html#contact" class="block py-3 px-2 hover:text-accent font-mono text-sm border-l-2 border-accent">// Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Project Header -->
+    <header class="pt-32 pb-16 px-4">
+        <div class="max-w-6xl mx-auto text-center">
+            <div class="inline-block bg-accent/10 text-accent px-4 py-1 rounded-full text-sm font-mono mb-4 border border-accent/20">
+                Embedded Systems
+            </div>
+            <h1 class="text-4xl md:text-5xl font-bold mb-6">RTOS for ARM Cortex-M</h1>
+            <p class="text-xl text-gray-400 max-w-3xl mx-auto">
+                A lightweight Real-Time Operating System developed from scratch for ARM Cortex-M microcontrollers.
+            </p>
+        </div>
+    </header>
+
+    <!-- Project Content -->
+    <main class="max-w-6xl mx-auto px-4 pb-20 space-y-20">
+        <!-- Section 1: Overview -->
+        <section id="overview" class="grid md:grid-cols-2 gap-12 items-center">
+            <div class="space-y-6">
+                <h2 class="text-3xl font-bold text-accent font-mono">// project_overview()</h2>
+                <div class="space-y-4">
+                    <p>This project involved developing a lightweight Real-Time Operating System (RTOS) from the ground up specifically for ARM Cortex-M microcontrollers. The RTOS supports task scheduling, inter-task communication, and resource management.</p>
+                    <p>Key features include preemptive multitasking, semaphores, message queues, and memory management, all designed with minimal overhead for resource-constrained embedded systems.</p>
+                </div>
+                <div class="flex flex-wrap gap-3">
+                    <span class="inline-block bg-accent/10 text-accent px-3 py-1 rounded-full text-xs font-mono border border-accent/20">C</span>
+                    <span class="inline-block bg-accent/10 text-accent px-3 py-1 rounded-full text-xs font-mono border border-accent/20">ARM Assembly</span>
+                    <span class="inline-block bg-accent/10 text-accent px-3 py-1 rounded-full text-xs font-mono border border-accent/20">RTOS</span>
+                    <span class="inline-block bg-accent/10 text-accent px-3 py-1 rounded-full text-xs font-mono border border-accent/20">Cortex-M</span>
+                </div>
+                <div class="flex flex-wrap gap-4 pt-4">
+                    <a href="#" class="bg-accent hover:bg-accent-dark text-terminal px-6 py-2 rounded font-mono text-sm inline-flex items-center">
+                        <i class="fab fa-github mr-2"></i> View on GitHub
+                    </a>
+                    <a href="#" class="border border-accent text-accent hover:bg-accent/10 px-6 py-2 rounded font-mono text-sm inline-flex items-center">
+                        <i class="fas fa-download mr-2"></i> Download Source
+                    </a>
+                </div>
+            </div>
+            <div class="bg-code/30 rounded-xl p-1 border border-accent/20 h-full">
+                <img src="https://via.placeholder.com/800x500/1e293b/10b981?text=RTOS+Architecture" alt="RTOS Architecture" class="rounded-lg w-full h-auto">
+            </div>
+        </section>
+
+        <!-- Section 2: Technical Details -->
+        <section id="technical" class="grid md:grid-cols-2 gap-12 items-center">
+            <div class="order-2 md:order-1">
+                <div class="bg-code/30 rounded-xl p-4 h-full">
+                    <pre><code class="text-sm">// Example task creation
+void task1(void *params) {
+    while(1) {
+        // Task code here
+        os_delay(100); // 100ms delay
+    }
+}
+
+// Initialize and start the RTOS
+int main() {
+    os_init();
+    os_task_create(task1, NULL, 1, 512);
+    os_start();
+    return 0;
+}</code></pre>
+                </div>
+            </div>
+            <div class="order-1 md:order-2 space-y-6">
+                <h2 class="text-3xl font-bold text-accent font-mono">// technical_details()</h2>
+                <div class="space-y-4">
+                    <h3 class="text-xl font-semibold text-syntax">Core Components</h3>
+                    <ul class="list-disc pl-5 space-y-2">
+                        <li><span class="font-medium">Scheduler:</span> Priority-based preemptive scheduler with round-robin for equal priority tasks</li>
+                        <li><span class="font-medium">Memory Management:</span> Static memory allocation with fixed-size blocks</li>
+                        <li><span class="font-medium">Synchronization:</span> Semaphores, mutexes, and message queues</li>
+                        <li><span class="font-medium">Context Switching:</span> Hand-optimized ARM assembly for fast task switching</li>
+                    </ul>
+                    <h3 class="text-xl font-semibold text-syntax mt-8">Performance Metrics</h3>
+                    <ul class="list-disc pl-5 space-y-2">
+                        <li>Context switch time: < 5µs @ 72MHz</li>
+                        <li>Memory footprint: < 8KB (including kernel)</li>
+                        <li>Maximum tasks: 32 (configurable)</li>
+                        <li>Priority levels: 8 (configurable)</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: Implementation -->
+        <section id="implementation" class="grid md:grid-cols-2 gap-12 items-center">
+            <div class="space-y-6">
+                <h2 class="text-3xl font-bold text-accent font-mono">// implementation()</h2>
+                <div class="space-y-4">
+                    <h3 class="text-xl font-semibold text-syntax">Development Process</h3>
+                    <p>The RTOS was developed using a test-driven approach, with each component tested in isolation on an STM32F4 Discovery board before integration.</p>
+                    <p>Key challenges included optimizing context switching time and minimizing interrupt latency while maintaining a clean, maintainable codebase.</p>
+                    
+                    <h3 class="text-xl font-semibold text-syntax mt-8">Tools Used</h3>
+                    <ul class="list-disc pl-5 space-y-1">
+                        <li>GCC ARM Embedded Toolchain</li>
+                        <li>OpenOCD for debugging</li>
+                        <li>STM32CubeIDE for project setup</li>
+                        <li>Git for version control</li>
+                    </ul>
+                </div>
+                <div class="pt-4">
+                    <a href="index.html#projects" class="inline-flex items-center text-accent hover:text-accent-dark font-mono">
+                        <i class="fas fa-arrow-left mr-2"></i> Back to Projects
+                    </a>
+                </div>
+            </div>
+            <div class="bg-code/30 rounded-xl p-1 border border-accent/20 h-full">
+                <img src="https://via.placeholder.com/800x500/1e293b/7dd3fc?text=RTOS+Debugging" alt="RTOS Debugging" class="rounded-lg w-full h-auto">
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-code/80 text-gray-400 py-8 border-t border-accent/20">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="text-center">
+                <p class="font-mono text-sm">© <span id="current-year">2024</span> Neerraj Singh Amarnath. All rights reserved.</p>
+                <p class="font-mono text-xs mt-2">/* Built with <i class="fas fa-heart text-red-400 mx-1"></i> and a lot of coffee */</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to top button -->
+    <button id="back-to-top" class="fixed bottom-8 right-8 bg-accent text-white p-3 rounded-full shadow-lg opacity-0 invisible transition-all duration-300 hover:bg-accent-dark">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        if (mobileMenuButton && mobileMenu) {
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+        }
+
+        // Back to top button
+        const backToTopButton = document.getElementById('back-to-top');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.remove('invisible', 'opacity-0');
+                backToTopButton.classList.add('opacity-100');
+            } else {
+                backToTopButton.classList.add('opacity-0', 'invisible');
+            }
+        });
+
+        backToTopButton.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Set current year
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>

@@ -80,12 +80,15 @@
                 <p>we interact with every day.</p>
                 <p class="text-comment mt-2">*/</p>
             </div>
-            <div class="space-x-4">
+            <div class="flex flex-wrap justify-center gap-4">
                 <a href="#projects" class="bg-accent text-terminal px-6 py-3 rounded font-mono text-sm hover:bg-accent-dark transition inline-flex items-center">
                     <i class="fas fa-code-branch mr-2"></i> view_projects()
                 </a>
                 <a href="#contact" class="border border-accent text-accent px-6 py-3 rounded font-mono text-sm hover:bg-accent/10 transition inline-flex items-center">
                     <i class="fas fa-terminal mr-2"></i> contact_me()
+                </a>
+                <a href="resume.pdf" download class="border border-accent text-accent px-6 py-3 rounded font-mono text-sm hover:bg-accent/10 transition inline-flex items-center">
+                    <i class="fas fa-file-download mr-2"></i> download_cv()
                 </a>
             </div>
         </div>
@@ -193,118 +196,138 @@
             <!-- Projects Grid -->
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- Project 1 -->
-                <div class="project-card bg-code/50 rounded-xl overflow-hidden border border-accent/20 transform transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
-                    <div class="h-48 overflow-hidden">
-                        <img src="https://via.placeholder.com/600x400/1e293b/10b981?text=RTOS+ARM" alt="RTOS for ARM Cortex-M" class="w-full h-full object-cover">
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-2 text-accent">RTOS for ARM Cortex-M</h3>
-                        <p class="text-gray-300 mb-4 text-sm">A lightweight Real-Time Operating System developed from scratch for ARM Cortex-M microcontrollers.</p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="inline-block bg-indigo-100 text-indigo-800 text-xs px-2 py-1 rounded-full">embedded</span>
-                            <span class="inline-block bg-indigo-100 text-indigo-800 text-xs px-2 py-1 rounded-full">c</span>
-                            <span class="inline-block bg-indigo-100 text-indigo-800 text-xs px-2 py-1 rounded-full">arm</span>
+                <div class="project-card group flex flex-col h-full bg-code/50 rounded-xl overflow-hidden border border-accent/20 transform transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:border-accent/50">
+                    <a href="rtos-project.html" class="block flex-grow">
+                        <div class="h-48 overflow-hidden">
+                            <img src="https://via.placeholder.com/600x400/1e293b/10b981?text=RTOS+ARM" alt="RTOS for ARM Cortex-M" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
                         </div>
-                        <div class="flex space-x-3">
-                            <a href="#" class="text-sm text-accent hover:underline inline-flex items-center">
-                                <i class="fab fa-github mr-1"></i> Code
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2 text-accent group-hover:text-accent/80 transition-colors">RTOS for ARM Cortex-M</h3>
+                            <p class="text-gray-300 mb-3 text-sm">A lightweight Real-Time Operating System developed from scratch for ARM Cortex-M microcontrollers.</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="inline-block bg-accent/10 text-accent text-xs px-3 py-1 rounded-full border border-accent/20 group-hover:border-accent/50 transition-colors">embedded</span>
+                                <span class="inline-block bg-accent/10 text-accent text-xs px-3 py-1 rounded-full border border-accent/20 group-hover:border-accent/50 transition-colors">c</span>
+                                <span class="inline-block bg-accent/10 text-accent text-xs px-3 py-1 rounded-full border border-accent/20 group-hover:border-accent/50 transition-colors">arm</span>
+                            </div>
+                        </div>
+                    </a>
+                    <div class="px-6 pb-4 mt-2">
+                        <div class="flex space-x-4">
+                            <a href="#" class="text-sm text-accent hover:underline inline-flex items-center hover:text-accent/80 transition-colors">
+                                <i class="fab fa-github mr-1.5"></i> Code
                             </a>
-                            <a href="#" class="text-sm text-accent hover:underline inline-flex items-center">
-                                <i class="fas fa-external-link-alt mr-1"></i> Live Demo
+                            <a href="#" class="text-sm text-accent hover:underline inline-flex items-center hover:text-accent/80 transition-colors">
+                                <i class="fas fa-external-link-alt mr-1.5"></i> Live Demo
                             </a>
                         </div>
                     </div>
                 </div>
 
                 <!-- Project 2 -->
-                <div class="project-card bg-code/50 rounded-xl overflow-hidden border border-accent/20 transform transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
-                    <div class="h-48 overflow-hidden">
-                        <img src="https://via.placeholder.com/600x400/1e293b/7dd3fc?text=Bootloader" alt="Custom Bootloader" class="w-full h-full object-cover">
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-2 text-accent">Custom Bootloader</h3>
-                        <p class="text-gray-300 mb-4 text-sm">A custom bootloader for STM32 microcontrollers with USB DFU support and secure firmware updates.</p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="inline-block bg-indigo-100 text-indigo-800 text-xs px-2 py-1 rounded-full">embedded</span>
-                            <span class="inline-block bg-indigo-100 text-indigo-800 text-xs px-2 py-1 rounded-full">stm32</span>
-                            <span class="inline-block bg-indigo-100 text-indigo-800 text-xs px-2 py-1 rounded-full">usb</span>
+                <div class="project-card group flex flex-col h-full bg-code/50 rounded-xl overflow-hidden border border-accent/20 transform transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:border-accent/50">
+                    <a href="#" class="block flex-grow">
+                        <div class="h-48 overflow-hidden">
+                            <img src="https://via.placeholder.com/600x400/1e293b/7dd3fc?text=Bootloader" alt="Custom Bootloader" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
                         </div>
-                        <div class="flex space-x-3">
-                            <a href="#" class="text-sm text-accent hover:underline inline-flex items-center">
-                                <i class="fab fa-github mr-1"></i> Code
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2 text-accent group-hover:text-accent/80 transition-colors">Custom Bootloader</h3>
+                            <p class="text-gray-300 mb-3 text-sm">A custom bootloader for STM32 microcontrollers with USB DFU support and secure firmware updates.</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="inline-block bg-accent/10 text-accent text-xs px-3 py-1 rounded-full border border-accent/20 group-hover:border-accent/50 transition-colors">embedded</span>
+                                <span class="inline-block bg-accent/10 text-accent text-xs px-3 py-1 rounded-full border border-accent/20 group-hover:border-accent/50 transition-colors">c</span>
+                                <span class="inline-block bg-accent/10 text-accent text-xs px-3 py-1 rounded-full border border-accent/20 group-hover:border-accent/50 transition-colors">stm32</span>
+                            </div>
+                        </div>
+                    </a>
+                    <div class="px-6 pb-4 mt-2">
+                        <div class="flex space-x-4">
+                            <a href="#" class="text-sm text-accent hover:underline inline-flex items-center hover:text-accent/80 transition-colors">
+                                <i class="fab fa-github mr-1.5"></i> Code
                             </a>
                         </div>
                     </div>
                 </div>
 
                 <!-- Project 3 -->
-                <div class="project-card bg-code/50 rounded-xl overflow-hidden border border-accent/20 transform transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
-                    <div class="h-48 overflow-hidden">
-                        <img src="https://via.placeholder.com/600x400/1e293b/f59e0b?text=CAN+Analyzer" alt="CAN Bus Analyzer" class="w-full h-full object-cover">
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-2 text-accent">CAN Bus Analyzer</h3>
-                        <p class="text-gray-300 mb-4 text-sm">A hardware tool for analyzing and debugging CAN bus networks with real-time message filtering.</p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="inline-block bg-indigo-100 text-indigo-800 text-xs px-2 py-1 rounded-full">embedded</span>
-                            <span class="inline-block bg-indigo-100 text-indigo-800 text-xs px-2 py-1 rounded-full">can</span>
-                            <span class="inline-block bg-indigo-100 text-indigo-800 text-xs px-2 py-1 rounded-full">c++</span>
+                <div class="project-card group flex flex-col h-full bg-code/50 rounded-xl overflow-hidden border border-accent/20 transform transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:border-accent/50">
+                    <a href="#" class="block flex-grow">
+                        <div class="h-48 overflow-hidden">
+                            <img src="https://via.placeholder.com/600x400/1e293b/f59e0b?text=CAN+Analyzer" alt="CAN Bus Analyzer" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
                         </div>
-                        <div class="flex space-x-3">
-                            <a href="#" class="text-sm text-accent hover:underline inline-flex items-center">
-                                <i class="fab fa-github mr-1"></i> Code
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2 text-accent group-hover:text-accent/80 transition-colors">CAN Bus Analyzer</h3>
+                            <p class="text-gray-300 mb-3 text-sm">A portable CAN bus analyzer with real-time data visualization and logging capabilities.</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="inline-block bg-accent/10 text-accent text-xs px-3 py-1 rounded-full border border-accent/20 group-hover:border-accent/50 transition-colors">embedded</span>
+                                <span class="inline-block bg-accent/10 text-accent text-xs px-3 py-1 rounded-full border border-accent/20 group-hover:border-accent/50 transition-colors">python</span>
+                                <span class="inline-block bg-accent/10 text-accent text-xs px-3 py-1 rounded-full border border-accent/20 group-hover:border-accent/50 transition-colors">qt</span>
+                            </div>
+                        </div>
+                    </a>
+                    <div class="px-6 pb-4 mt-2">
+                        <div class="flex space-x-4">
+                            <a href="#" class="text-sm text-accent hover:underline inline-flex items-center hover:text-accent/80 transition-colors">
+                                <i class="fab fa-github mr-1.5"></i> Code
+                            </a>
+                            <a href="#" class="text-sm text-accent hover:underline inline-flex items-center hover:text-accent/80 transition-colors">
+                                <i class="fas fa-external-link-alt mr-1.5"></i> Live Demo
                             </a>
                         </div>
                     </div>
                 </div>
 
                 <!-- Project 4 -->
-                <div class="project-card bg-code/50 rounded-xl overflow-hidden border border-accent/20 transform transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
-                    <div class="h-48 overflow-hidden">
-                        <img src="https://via.placeholder.com/600x400/1e293b/f472b6?text=Assembly+Game" alt="x86 Assembly Game" class="w-full h-full object-cover">
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-2 text-accent">x86 Assembly Game</h3>
-                        <p class="text-gray-300 mb-4 text-sm">A simple game written entirely in x86 Assembly language with custom graphics rendering.</p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="inline-block bg-indigo-100 text-indigo-800 text-xs px-2 py-1 rounded-full">assembly</span>
-                            <span class="inline-block bg-indigo-100 text-indigo-800 text-xs px-2 py-1 rounded-full">x86</span>
-                            <span class="inline-block bg-indigo-100 text-indigo-800 text-xs px-2 py-1 rounded-full">low-level</span>
+                <div class="project-card group flex flex-col h-full bg-code/50 rounded-xl overflow-hidden border border-accent/20 transform transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:border-accent/50">
+                    <a href="#" class="block flex-grow">
+                        <div class="h-48 overflow-hidden">
+                            <img src="https://via.placeholder.com/600x400/1e293b/818cf8?text=Linux+Driver" alt="Embedded Linux Driver" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
                         </div>
-                        <div class="flex space-x-3">
-                            <a href="#" class="text-sm text-accent hover:underline inline-flex items-center">
-                                <i class="fab fa-github mr-1"></i> Code
-                            </a>
-                            <a href="#" class="text-sm text-accent hover:underline inline-flex items-center">
-                                <i class="fas fa-external-link-alt mr-1"></i> Play
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2 text-accent group-hover:text-accent/80 transition-colors">Embedded Linux Driver</h3>
+                            <p class="text-gray-300 mb-3 text-sm">A custom Linux kernel driver for interfacing with custom hardware on a Raspberry Pi.</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="inline-block bg-accent/10 text-accent text-xs px-3 py-1 rounded-full border border-accent/20 group-hover:border-accent/50 transition-colors">linux</span>
+                                <span class="inline-block bg-accent/10 text-accent text-xs px-3 py-1 rounded-full border border-accent/20 group-hover:border-accent/50 transition-colors">c</span>
+                                <span class="inline-block bg-accent/10 text-accent text-xs px-3 py-1 rounded-full border border-accent/20 group-hover:border-accent/50 transition-colors">raspberry-pi</span>
+                            </div>
+                        </div>
+                    </a>
+                    <div class="px-6 pb-4 mt-2">
+                        <div class="flex space-x-4">
+                            <a href="#" class="text-sm text-accent hover:underline inline-flex items-center hover:text-accent/80 transition-colors">
+                                <i class="fab fa-github mr-1.5"></i> Code
                             </a>
                         </div>
                     </div>
                 </div>
 
                 <!-- Project 5 -->
-                <div class="project-card bg-code/50 rounded-xl overflow-hidden border border-accent/20 transform transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
-                    <div class="h-48 overflow-hidden">
-                        <img src="https://via.placeholder.com/600x400/1e293b/818cf8?text=Linux+Driver" alt="Embedded Linux Driver" class="w-full h-full object-cover">
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-2 text-accent">Embedded Linux Driver</h3>
-                        <p class="text-gray-300 mb-4 text-sm">A custom Linux kernel module for interfacing with custom hardware and memory-mapped I/O.</p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="inline-block bg-indigo-100 text-indigo-800 text-xs px-2 py-1 rounded-full">linux</span>
-                            <span class="inline-block bg-indigo-100 text-indigo-800 text-xs px-2 py-1 rounded-full">kernel</span>
-                            <span class="inline-block bg-indigo-100 text-indigo-800 text-xs px-2 py-1 rounded-full">driver</span>
+                <div class="project-card group flex flex-col h-full bg-code/50 rounded-xl overflow-hidden border border-accent/20 transform transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:border-accent/50">
+                    <a href="#" class="block flex-grow">
+                        <div class="h-48 overflow-hidden">
+                            <img src="https://via.placeholder.com/600x400/1e293b/ec4899?text=FPGA+DSP" alt="FPGA-Based Signal Processor" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
                         </div>
-                        <div class="flex space-x-3">
-                            <a href="#" class="text-sm text-accent hover:underline inline-flex items-center">
-                                <i class="fab fa-github mr-1"></i> Code
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2 text-accent group-hover:text-accent/80 transition-colors">FPGA Signal Processor</h3>
+                            <p class="text-gray-300 mb-3 text-sm">A real-time digital signal processing system implemented on an FPGA with custom VHDL modules.</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="inline-block bg-accent/10 text-accent text-xs px-3 py-1 rounded-full border border-accent/20 group-hover:border-accent/50 transition-colors">fpga</span>
+                                <span class="inline-block bg-accent/10 text-accent text-xs px-3 py-1 rounded-full border border-accent/20 group-hover:border-accent/50 transition-colors">vhdl</span>
+                                <span class="inline-block bg-accent/10 text-accent text-xs px-3 py-1 rounded-full border border-accent/20 group-hover:border-accent/50 transition-colors">dsp</span>
+                            </div>
+                        </div>
+                    </a>
+                    <div class="px-6 pb-4 mt-2">
+                        <div class="flex space-x-4">
+                            <a href="#" class="text-sm text-accent hover:underline inline-flex items-center hover:text-accent/80 transition-colors">
+                                <i class="fab fa-github mr-1.5"></i> Code
                             </a>
                         </div>
                     </div>
                 </div>
 
                 <!-- Project 6 -->
-                <div class="project-card bg-code/50 rounded-xl overflow-hidden border border-accent/20 transform transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
+                <div class="project-card group bg-code/50 rounded-xl overflow-hidden border border-accent/20 transform transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:border-accent/50">
                     <div class="h-48 overflow-hidden">
                         <img src="https://via.placeholder.com/600x400/1e293b/ec4899?text=FPGA+DSP" alt="FPGA-Based Signal Processor" class="w-full h-full object-cover">
                     </div>
@@ -312,9 +335,9 @@
                         <h3 class="text-xl font-bold mb-2 text-accent">FPGA Signal Processor</h3>
                         <p class="text-gray-300 mb-4 text-sm">A real-time digital signal processing system implemented on an FPGA with custom VHDL modules.</p>
                         <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="inline-block bg-indigo-100 text-indigo-800 text-xs px-2 py-1 rounded-full">fpga</span>
-                            <span class="inline-block bg-indigo-100 text-indigo-800 text-xs px-2 py-1 rounded-full">vhdl</span>
-                            <span class="inline-block bg-indigo-100 text-indigo-800 text-xs px-2 py-1 rounded-full">dsp</span>
+                            <span class="inline-block bg-accent/10 text-accent text-xs px-3 py-1 rounded-full border border-accent/20 group-hover:border-accent/50 transition-colors">fpga</span>
+                            <span class="inline-block bg-accent/10 text-accent text-xs px-3 py-1 rounded-full border border-accent/20 group-hover:border-accent/50 transition-colors">vhdl</span>
+                            <span class="inline-block bg-accent/10 text-accent text-xs px-3 py-1 rounded-full border border-accent/20 group-hover:border-accent/50 transition-colors">dsp</span>
                         </div>
                         <div class="flex space-x-3">
                             <a href="#" class="text-sm text-accent hover:underline inline-flex items-center">
@@ -333,60 +356,48 @@
             <h2 class="text-3xl font-bold text-center mb-12 font-mono">// contact_me()</h2>
             <div class="bg-code/50 rounded-xl border border-accent/20 p-8 backdrop-blur-sm">
                 <p class="text-center text-gray-300 mb-8 font-mono">
-                    /* Looking for collaboration or have questions? */
+                    /* Get in touch for collaboration or questions */
                 </p>
-                <p class="text-center text-gray-400 text-sm mb-8">
-                    I'm currently available for embedded systems and low-level programming opportunities.
-                </p>
-                <form id="contact-form" class="space-y-6">
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <div>
-                            <label for="name" class="block text-sm font-mono text-gray-400 mb-1">> name</label>
-                            <input type="text" id="name" name="name" required 
-                                   class="w-full px-4 py-3 bg-code/80 border border-accent/20 text-gray-200 rounded font-mono text-sm focus:ring-2 focus:ring-accent/50 focus:border-accent/50 focus:outline-none transition">
+                
+                <div class="space-y-6 max-w-md mx-auto">
+                    <!-- Email -->
+                    <div class="flex items-center p-4 bg-code/80 rounded-lg border border-accent/20 hover:border-accent/50 transition-colors">
+                        <div class="bg-accent/10 p-3 rounded-lg mr-4">
+                            <i class="fas fa-envelope text-accent text-xl"></i>
                         </div>
                         <div>
-                            <label for="email" class="block text-sm font-mono text-gray-400 mb-1">> email</label>
-                            <input type="email" id="email" name="email" required 
-                                   class="w-full px-4 py-3 bg-code/80 border border-accent/20 text-gray-200 rounded font-mono text-sm focus:ring-2 focus:ring-accent/50 focus:border-accent/50 focus:outline-none transition">
+                            <p class="text-xs text-gray-400 font-mono mb-1">Email</p>
+                            <a href="mailto:neerraj.amar@gmail.com" class="text-accent hover:underline font-mono">neerraj.amar@gmail.com</a>
                         </div>
                     </div>
-                    <div>
-                        <label for="subject" class="block text-sm font-mono text-gray-400 mb-1">> subject</label>
-                        <input type="text" id="subject" name="subject" required 
-                               class="w-full px-4 py-3 bg-code/80 border border-accent/20 text-gray-200 rounded font-mono text-sm focus:ring-2 focus:ring-accent/50 focus:border-accent/50 focus:outline-none transition">
-                    </div>
-                    <div>
-                        <label for="message" class="block text-sm font-mono text-gray-400 mb-1">> message</label>
-                        <textarea id="message" name="message" rows="5" required 
-                                 class="w-full px-4 py-3 bg-code/80 border border-accent/20 text-gray-200 rounded font-mono text-sm focus:ring-2 focus:ring-accent/50 focus:border-accent/50 focus:outline-none transition"></textarea>
-                    </div>
-                    <div class="text-center">
-                        <button type="submit" class="bg-accent text-terminal px-8 py-3 rounded font-mono hover:bg-accent-dark transition inline-flex items-center">
-                            <i class="fas fa-paper-plane mr-2"></i> send_message()
-                        </button>
-                    </div>
-                </form>
-                <div class="mt-12 pt-8 border-t border-accent/20">
-                    <p class="text-center text-gray-400 text-sm mb-6 font-mono">// Connect with me</p>
-                    <div class="flex justify-center space-x-6">
-                        <a href="#" class="text-gray-400 hover:text-accent transition" title="GitHub">
-                            <i class="fab fa-github text-2xl"></i>
-                        </a>
-                        <a href="#" class="text-gray-400 hover:text-accent transition" title="LinkedIn">
-                            <i class="fab fa-linkedin-in text-2xl"></i>
-                        </a>
-                        <a href="#" class="text-gray-400 hover:text-accent transition" title="Twitter">
-                            <i class="fab fa-twitter text-2xl"></i>
-                        </a>
-                        <a href="#" class="text-gray-400 hover:text-accent transition" title="Email">
-                            <i class="fas fa-envelope text-2xl"></i>
-                        </a>
-                        <a href="#" class="text-gray-400 hover:text-accent transition" title="GitLab">
-                            <i class="fab fa-gitlab text-2xl"></i>
-                        </a>
-                    </div>
+                    
+                    <!-- LinkedIn -->
+                    <a href="https://www.linkedin.com/in/neerrajamar" target="_blank" class="block p-4 bg-code/80 rounded-lg border border-accent/20 hover:border-accent/50 transition-colors">
+                        <div class="flex items-center">
+                            <div class="bg-accent/10 p-3 rounded-lg mr-4">
+                                <i class="fab fa-linkedin-in text-accent text-xl"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs text-gray-400 font-mono mb-1">LinkedIn</p>
+                                <p class="text-accent font-mono">linkedin.com/in/neerrajamar</p>
+                            </div>
+                        </div>
+                    </a>
+                    
+                    <!-- Instagram -->
+                    <a href="#" class="block p-4 bg-code/80 rounded-lg border border-accent/20 hover:border-accent/50 transition-colors">
+                        <div class="flex items-center">
+                            <div class="bg-accent/10 p-3 rounded-lg mr-4">
+                                <i class="fab fa-instagram text-accent text-xl"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs text-gray-400 font-mono mb-1">Instagram</p>
+                                <p class="text-accent font-mono">@your_instagram</p>
+                            </div>
+                        </div>
+                    </a>
                 </div>
+                
             </div>
         </div>
     </section>
